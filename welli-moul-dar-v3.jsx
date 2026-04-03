@@ -598,7 +598,7 @@ export default function App() {
               <span style={{ color: WHITE, fontWeight: "600" }}>MAD 24.18M</span> in additional gross profit — without requiring any dramatic market shift. Just better funnel performance.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-              {[["Strategy", "Moulki B'Sahla"], ["Focus", "Eco & MS aided band MAD 300k–700k"], ["Engine", "Website · WhatsApp · CRM"]].map(([k, v]) => (
+              {[["Strategy", "Welli Moul Dar"], ["Focus", "Eco & MS aided band MAD 300k–700k"], ["Engine", "Website · WhatsApp · CRM"]].map(([k, v]) => (
                 <div key={k} style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px solid #1A1A1A", paddingBottom: "16px" }}>
                   <span style={{ fontSize: "12px", color: "#444", letterSpacing: "0.1em", textTransform: "uppercase" }}>{k}</span>
                   <span style={{ fontSize: "13px", color: "#A1A1A6", fontWeight: "300" }}>{v}</span>
