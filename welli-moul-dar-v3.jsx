@@ -47,6 +47,8 @@ export default function App() {
   const [openPhase, setOpenPhase] = useState(null);
   const [activeSeg, setActiveSeg] = useState(0);
   const [scrolled, setScrolled] = useState(false);
+  const [activeFunnelStep, setActiveFunnelStep] = useState(null);
+  const [activeConvTarget, setActiveConvTarget] = useState(null);
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 60);
@@ -58,7 +60,7 @@ export default function App() {
 
   const ps = [
     { label: "Product", head: "The complete ownership journey", items: ["The unit + state subsidy eligibility explained", "Monthly payment simulator built-in", "Project info, neighborhood, floor plans", "Financing pathway & document guidance", "Post-reservation reassurance"] },
-    { label: "Price", head: "Protect realized price", items: ["+1% realized price = MAD 23.25M additional gross profit", "Stay within the active subsidy-compatible band", "Financing clarity eliminates discount pressure", "Lead with monthly affordability, never with 'cheapness'"] },
+    { label: "Price", head: "Protect realized price", items: ["+1% realized price = MAD 25.95M additional gross profit", "Stay within the active subsidy-compatible band", "Financing clarity eliminates discount pressure", "Lead with monthly affordability, never with 'cheapness'"] },
     { label: "Place", head: "Integrated omnichannel", items: ["Website — central conversion hub", "WhatsApp — fast contact & qualification layer", "Sales offices & show units for trust", "Bank & mortgage partners for financing conversion", "Digital MRE acquisition for diaspora buyers"] },
     { label: "Promotion", head: "Messages that convert", items: ['"From renter to homeowner"', '"Know your subsidy. Know your monthly payment."', '"Reserve with confidence"', 'Never: luxury · cheap · green · best price'] },
   ];
@@ -83,6 +85,24 @@ export default function App() {
     { name: "Urban Salaried", detail: "Declared income households transitioning from renting to owning in urban & peri-urban areas." },
     { name: "Young Families", detail: "Couples forming families. First-home decision driven by space, stability, and monthly affordability." },
     { name: "MRE Diaspora", detail: "Moroccans abroad seeking a structured, remote-first, bank-compatible path to ownership." },
+  ];
+
+  const funnelSteps = [
+    { label: "Ad / Social / Search", detail: "The entry point. Meta, Google, and YouTube ads target first-time buyers by income band and city. Every ad has one CTA — the simulator or a project page. No brand awareness spend." },
+    { label: "Project landing page", detail: "Each project has its own page: floor plans, location, monthly payment estimate, subsidy checker. Built to answer 'Can I afford this?' in under 60 seconds." },
+    { label: "Payment + subsidy simulator", detail: "The conversion engine. Visitor inputs income and city and sees monthly payment and subsidy eligibility instantly. Removes the #1 blocker: 'I don't know if I can afford it.'" },
+    { label: "WhatsApp or callback", detail: "The human handoff. An advisor responds within minutes via WhatsApp or scheduled callback. Speed here is the single biggest predictor of lead-to-visit conversion." },
+    { label: "CRM qualification", detail: "Every lead is tagged: city, budget band, subsidy eligibility, timeline, financing status. Advisors work a scored pipeline, not a raw list. No lead falls through the cracks." },
+    { label: "Visit booking", detail: "Qualified leads book a guided show-unit visit. Physical experience of the product anchors emotional commitment before financing discussions begin." },
+    { label: "Reservation", detail: "Buyer signs a reservation contract and pays the deposit. This locks the price and triggers bank financing paperwork. The moment the deal becomes real." },
+    { label: "Financing follow-up", detail: "The advisor stays active through mortgage approval. Addoha's bank partnerships reduce drop-off here — the highest-risk post-reservation stage in the industry." },
+  ];
+
+  const convTargets = [
+    { m: "Visitor → Lead", v: "3–5%", pct: 5, detail: "For every 100 people on a project page, 3–5 submit a form or tap WhatsApp. Achievable with a fast-loading simulator and a low-friction CTA. Real estate industry benchmark is 2–4%." },
+    { m: "Lead → Visit", v: "20–30%", pct: 30, detail: "Roughly 1 in 4 engaged leads books a physical visit. WhatsApp response under 5 min and a pre-qualification script are the key drivers. Below 20% signals weak follow-up speed." },
+    { m: "Visit → Reservation", v: "10–15%", pct: 15, detail: "1 in 7–10 visitors signs a reservation. The show unit experience, advisor quality, and on-site payment simulator close the gap. Above 15% in the first pilot would be exceptional." },
+    { m: "Reservation → Finance-Ready", v: "70%+", pct: 70, detail: "7 in 10 reservations progress to a complete bank dossier. Addoha's bank partnerships and advisor-guided paperwork are the differentiator — the industry loses 40–50% at this stage." },
   ];
 
   return (
@@ -143,7 +163,7 @@ export default function App() {
 
         <R delay={0.35}>
           <div style={{ display: "flex", gap: "48px", flexWrap: "wrap" }}>
-            {[["MAD 2.325B", "Eco & MS Revenue 2025"], ["27%", "Gross Margin"], ["10,195", "Eco & MS Pre-Sales"]].map(([v, l]) => (
+            {[["MAD 2.595B", "Consolidated Revenue 2024"], ["25.4%", "Gross Margin 2024"], ["10,195", "Eco & MS Pre-Sales"]].map(([v, l]) => (
               <div key={l}>
                 <div style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: "700", color: WHITE, letterSpacing: "-0.02em" }}>{v}</div>
                 <div style={{ fontSize: "12px", color: "#6E6E73", marginTop: "4px", letterSpacing: "0.04em" }}>{l}</div>
@@ -352,41 +372,63 @@ export default function App() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "60px", alignItems: "start" }}>
             <R delay={0.05}>
               <div>
-                {["Ad / Social / Search", "Project landing page", "Payment + subsidy simulator", "WhatsApp or callback", "CRM qualification", "Visit booking", "Reservation", "Financing follow-up"].map((s, i, a) => (
-                  <div key={i} style={{ display: "flex", gap: "20px", alignItems: "stretch" }}>
-                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                      <div style={{ width: "32px", height: "32px", borderRadius: "50%", background: i === 0 ? G : "transparent", border: `1.5px solid ${i === 0 ? G : "#D2D2D7"}`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                        <span style={{ fontSize: "10px", fontWeight: "700", color: i === 0 ? WHITE : GRAY }}>{i + 1}</span>
+                {funnelSteps.map((s, i, a) => {
+                  const active = activeFunnelStep === i;
+                  return (
+                    <div key={i}>
+                      <div
+                        onClick={() => setActiveFunnelStep(active ? null : i)}
+                        style={{ display: "flex", gap: "20px", alignItems: "stretch", cursor: "pointer" }}
+                      >
+                        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                          <div style={{ width: "32px", height: "32px", borderRadius: "50%", background: active ? G : "transparent", border: `1.5px solid ${active ? G : "#D2D2D7"}`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "all 0.2s" }}>
+                            <span style={{ fontSize: "10px", fontWeight: "700", color: active ? WHITE : GRAY }}>{i + 1}</span>
+                          </div>
+                          {i < a.length - 1 && <div style={{ width: "1px", flex: 1, background: active ? G : "#E5E5E5", minHeight: "20px", transition: "background 0.2s" }} />}
+                        </div>
+                        <div style={{ paddingBottom: "24px", paddingTop: "6px", flex: 1 }}>
+                          <span style={{ fontSize: "15px", fontWeight: active ? "600" : "300", color: active ? BLACK : GRAY, transition: "all 0.2s" }}>{s.label}</span>
+                        </div>
+                        <div style={{ paddingTop: "8px", fontSize: "14px", color: active ? G : "#D2D2D7", transition: "color 0.2s", flexShrink: 0 }}>›</div>
                       </div>
-                      {i < a.length - 1 && <div style={{ width: "1px", flex: 1, background: "#E5E5E5", minHeight: "20px" }} />}
+                      {active && (
+                        <div className="anim" style={{ marginLeft: "52px", marginTop: "-16px", marginBottom: "20px", padding: "16px 20px", background: G_BG, borderLeft: `2px solid ${G}`, borderRadius: "0 8px 8px 0" }}>
+                          <p style={{ fontSize: "13px", color: BLACK, lineHeight: 1.7, fontWeight: "300" }}>{s.detail}</p>
+                        </div>
+                      )}
                     </div>
-                    <div style={{ paddingBottom: "24px", paddingTop: "6px" }}>
-                      <span style={{ fontSize: "15px", fontWeight: i === 0 ? "600" : "300", color: i === 0 ? BLACK : GRAY }}>{s}</span>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </R>
 
             <R delay={0.1}>
               <div>
                 <div style={{ fontSize: "10px", fontWeight: "600", letterSpacing: "0.18em", color: G, textTransform: "uppercase", marginBottom: "32px" }}>Conversion Targets — Pilot</div>
-                {[
-                  { m: "Visitor → Lead", v: "3–5%", pct: 5 },
-                  { m: "Lead → Visit", v: "20–30%", pct: 30 },
-                  { m: "Visit → Reservation", v: "10–15%", pct: 15 },
-                  { m: "Reservation → Finance-Ready", v: "70%+", pct: 70 },
-                ].map(({ m, v, pct }) => (
-                  <div key={m} style={{ marginBottom: "32px" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "8px" }}>
-                      <span style={{ fontSize: "13px", color: GRAY, fontWeight: "400" }}>{m}</span>
-                      <span style={{ fontSize: "24px", fontWeight: "700", letterSpacing: "-0.02em" }}>{v}</span>
+                {convTargets.map(({ m, v, pct, detail }, idx) => {
+                  const active = activeConvTarget === idx;
+                  return (
+                    <div key={m} style={{ marginBottom: "28px" }}>
+                      <div
+                        onClick={() => setActiveConvTarget(active ? null : idx)}
+                        style={{ cursor: "pointer" }}
+                      >
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "8px" }}>
+                          <span style={{ fontSize: "13px", color: active ? BLACK : GRAY, fontWeight: active ? "600" : "400", transition: "all 0.2s" }}>{m}</span>
+                          <span style={{ fontSize: "24px", fontWeight: "700", letterSpacing: "-0.02em", color: active ? G : BLACK, transition: "color 0.2s" }}>{v}</span>
+                        </div>
+                        <div style={{ height: "3px", background: "#E5E5E5", borderRadius: "2px" }}>
+                          <div style={{ height: "3px", background: G, borderRadius: "2px", width: `${pct}%`, transition: "width 1s cubic-bezier(.22,1,.36,1)" }} />
+                        </div>
+                      </div>
+                      {active && (
+                        <div className="anim" style={{ marginTop: "12px", padding: "14px 18px", background: G_BG, borderLeft: `2px solid ${G}`, borderRadius: "0 8px 8px 0" }}>
+                          <p style={{ fontSize: "13px", color: BLACK, lineHeight: 1.7, fontWeight: "300" }}>{detail}</p>
+                        </div>
+                      )}
                     </div>
-                    <div style={{ height: "3px", background: "#E5E5E5", borderRadius: "2px" }}>
-                      <div style={{ height: "3px", background: G, borderRadius: "2px", width: `${pct}%`, transition: "width 1s cubic-bezier(.22,1,.36,1)" }} />
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </R>
           </div>
@@ -403,9 +445,31 @@ export default function App() {
               <span style={{ color: G }}>A margin strategy.</span>
             </h2>
             <div style={{ width: "48px", height: "2px", background: G, marginBottom: "20px" }} />
-            <p style={{ fontSize: "13px", color: GRAY, fontFamily: "monospace", marginBottom: "56px", letterSpacing: "0.04em" }}>
-              Base: MAD 2.325B Eco & MS Revenue · 27% gross margin → ~MAD 627.75M estimated gross profit
+            <p style={{ fontSize: "13px", color: GRAY, fontFamily: "monospace", marginBottom: "40px", letterSpacing: "0.04em" }}>
+              Base: MAD 2,594.7M Revenue 2024 · 25.4% gross margin → ~MAD 659.8M gross profit
             </p>
+          </R>
+
+          {/* 2024 Actual P&L Snapshot */}
+          <R>
+            <div style={{ fontSize: "10px", fontWeight: "600", letterSpacing: "0.18em", color: G, textTransform: "uppercase", marginBottom: "16px" }}>2024 Actual — Income Statement Snapshot</div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: "1px", background: "#E5E5E5", marginBottom: "56px" }}>
+              {[
+                ["MAD 2,594.7M", "Revenue", null],
+                ["MAD 659.8M", "Gross Profit", "25.4%"],
+                ["MAD 551.1M", "EBITDA", "21.2%"],
+                ["MAD 493.1M", "Recurring EBIT", "19.0%"],
+                ["MAD 272.2M", "Net Income (Group)", "10.5%"],
+              ].map(([v, l, m], i) => (
+                <R key={i} delay={i * 0.06}>
+                  <div style={{ background: i === 4 ? BLACK : WHITE, padding: "28px 20px" }}>
+                    <div style={{ fontSize: "clamp(13px, 1.5vw, 18px)", fontWeight: "700", letterSpacing: "-0.02em", color: i === 4 ? WHITE : BLACK, marginBottom: "8px" }}>{v}</div>
+                    <div style={{ fontSize: "12px", color: i === 4 ? "rgba(255,255,255,0.5)" : GRAY, marginBottom: "4px" }}>{l}</div>
+                    {m && <div style={{ fontSize: "11px", fontWeight: "600", color: G }}>{m} margin</div>}
+                  </div>
+                </R>
+              ))}
+            </div>
           </R>
 
           <div style={{ display: "flex", gap: "1px", background: "#E5E5E5", marginBottom: "1px" }}>
@@ -420,13 +484,13 @@ export default function App() {
 
           <div className="anim" key={activeLever} style={{ background: LIGHT, marginBottom: "24px" }}>
             {(activeLever === 0 ? [
-              ["+0.5% realized price", "MAD 11.625M"],
-              ["+1.0% realized price", "MAD 23.25M"],
-              ["+2.0% realized price", "MAD 46.5M"],
+              ["+0.5% realized price", "MAD 13.0M"],
+              ["+1.0% realized price", "MAD 26.0M"],
+              ["+2.0% realized price", "MAD 51.9M"],
             ] : [
-              ["+1% Eco & MS volume", "MAD 6.28M"],
-              ["+2% Eco & MS volume", "MAD 12.56M"],
-              ["+3% Eco & MS volume", "MAD 18.83M"],
+              ["+1% volume", "MAD 6.6M"],
+              ["+2% volume", "MAD 13.2M"],
+              ["+3% volume", "MAD 19.8M"],
             ]).map(([s, v], i) => (
               <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "24px 32px", borderBottom: "1px solid #E5E5E5" }}>
                 <span style={{ fontSize: "16px", fontWeight: "300" }}>{s}</span>
@@ -436,10 +500,10 @@ export default function App() {
           </div>
 
           <div style={{ fontSize: "10px", fontWeight: "600", letterSpacing: "0.18em", color: G, textTransform: "uppercase", marginBottom: "16px" }}>Combined Upside</div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "56px" }}>
             {[
-              ["+0.5% price + 2% vol.", "~MAD 24.18M", false],
-              ["+1.0% price + 3% vol.", "~MAD 42.08M", true],
+              ["+0.5% price + 2% vol.", "~MAD 26.2M", false],
+              ["+1.0% price + 3% vol.", "~MAD 45.7M", true],
             ].map(([s, v, bold], i) => (
               <R key={i} delay={i * 0.1}>
                 <div style={{ padding: "40px", background: bold ? BLACK : LIGHT, borderRadius: "16px" }}>
@@ -450,6 +514,41 @@ export default function App() {
               </R>
             ))}
           </div>
+
+          {/* Marketing Investment Frame */}
+          <R>
+            <div style={{ width: "48px", height: "2px", background: G, marginBottom: "32px" }} />
+            <div style={{ fontSize: "10px", fontWeight: "600", letterSpacing: "0.18em", color: G, textTransform: "uppercase", marginBottom: "16px" }}>Marketing Investment Frame</div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "24px" }}>
+              {[
+                ["MAD 20–25M / yr", "Proposed Incremental Investment", "Digital ads · CRM & tech stack · Content & creative · MRE campaign layer", false],
+                ["~0.9% of Revenue", "Investment-to-Revenue Ratio", "Conservative vs. 1–3% sector norm for full-launch digital programs", true],
+              ].map(([v, t, d, bold], i) => (
+                <R key={i} delay={i * 0.08}>
+                  <div style={{ padding: "36px 32px", background: bold ? G_BG : LIGHT, borderRadius: "16px", border: bold ? `1.5px solid ${G}44` : "none" }}>
+                    <div style={{ fontSize: "clamp(20px, 2.5vw, 28px)", fontWeight: "700", letterSpacing: "-0.02em", color: bold ? G : BLACK, marginBottom: "10px" }}>{v}</div>
+                    <div style={{ fontWeight: "600", fontSize: "14px", marginBottom: "8px" }}>{t}</div>
+                    <div style={{ fontSize: "13px", color: GRAY, lineHeight: 1.5, fontWeight: "300" }}>{d}</div>
+                  </div>
+                </R>
+              ))}
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1px", background: "#E5E5E5" }}>
+              {[
+                ["Break-even", "+1.0% price OR\n+3.8% volume", "Required to cover MAD 25M investment — a low threshold for a CRM-driven funnel"],
+                ["Conservative ROI", "+5% net return", "+MAD 26.2M upside − MAD 25M cost → +MAD 1.2M net; platform fully built for year 2"],
+                ["Ambitious ROI", "+83% net return", "+MAD 45.7M upside − MAD 25M cost → +MAD 20.7M net on invested capital"],
+              ].map(([t, v, d], i) => (
+                <R key={i} delay={i * 0.06}>
+                  <div style={{ background: WHITE, padding: "32px 24px" }}>
+                    <div style={{ fontSize: "10px", fontWeight: "600", letterSpacing: "0.14em", color: G, textTransform: "uppercase", marginBottom: "12px" }}>{t}</div>
+                    <div style={{ fontSize: "clamp(15px, 1.8vw, 20px)", fontWeight: "700", letterSpacing: "-0.02em", color: BLACK, marginBottom: "10px", whiteSpace: "pre-line" }}>{v}</div>
+                    <div style={{ fontSize: "12px", color: GRAY, lineHeight: 1.5, fontWeight: "300" }}>{d}</div>
+                  </div>
+                </R>
+              ))}
+            </div>
+          </R>
         </section>
 
         <div style={{ height: "1px", background: "#E5E5E5" }} />
@@ -594,8 +693,9 @@ export default function App() {
           <div style={{ width: "100%", height: "1px", background: "#1A1A1A", marginBottom: "48px" }} />
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px" }}>
             <p style={{ fontSize: "16px", color: "#6E6E73", lineHeight: 1.7, fontWeight: "300" }}>
-              On Addoha's own 2026 numbers, a modest improvement of +0.5% in realized price and +2% in volume on Eco & MS generates approximately{" "}
-              <span style={{ color: WHITE, fontWeight: "600" }}>MAD 24.18M</span> in additional gross profit — without requiring any dramatic market shift. Just better funnel performance.
+              On Addoha's 2024 actuals (MAD 2,594.7M revenue, 25.4% gross margin), a modest improvement of +0.5% in realized price and +2% in volume generates approximately{" "}
+              <span style={{ color: WHITE, fontWeight: "600" }}>MAD 26.2M</span> in additional gross profit — nearly covering a full MAD 25M digital investment. A +1% / +3% scenario unlocks{" "}
+              <span style={{ color: G, fontWeight: "600" }}>MAD 45.7M</span> — a clear positive return. Just better funnel performance.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               {[["Strategy", "Welli Moul Dar"], ["Focus", "Eco & MS aided band MAD 300k–700k"], ["Engine", "Website · WhatsApp · CRM"]].map(([k, v]) => (
