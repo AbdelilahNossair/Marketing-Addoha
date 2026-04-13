@@ -1,166 +1,209 @@
-# The Numbers Behind the Strategy — Plain English
+# The Numbers Behind the Green Homes Strategy — Plain English
 
-> This is not a brand campaign. It's a math problem with a clear answer.
+> This is not an environmental initiative. It's a per-unit margin improvement dressed as a product feature.
 
 ---
 
 ## Where Addoha Stands Today (2024 Actuals)
 
-Think of a company's financials like a funnel of money. You start with everything customers pay you, then costs eat into it layer by layer, and what survives at the bottom is the profit.
+Same starting point as any Addoha strategy — the 2024 consolidated financials. Every strategic argument has to earn its way from this base.
 
 | What it measures | Amount | What it means in plain English |
 |---|---|---|
 | **Revenue** | MAD 2,594.7M | Every dirham customers paid Addoha for homes in 2024 |
 | **Gross Profit** | MAD 659.8M (25.4%) | What's left after paying for land, construction, and materials |
-| **EBITDA** | MAD 551.1M (21.2%) | What's left after also paying staff, taxes, and running costs — before debt and accounting |
-| **Recurring EBIT** | MAD 493.1M (19.0%) | Same as above but also subtracting depreciation (the wear-and-tear cost of assets) |
-| **Net Income** | MAD 272.2M (10.5%) | What actually belongs to Addoha's shareholders after every single cost, tax, and debt payment |
+| **EBITDA** | MAD 551.1M (21.2%) | What's left after also paying staff, taxes, and running costs |
+| **Recurring EBIT** | MAD 493.1M (19.0%) | Same as above, minus depreciation |
+| **Net Income** | MAD 272.2M (10.5%) | What actually belongs to shareholders after everything |
 
-**The simple version:** For every MAD 100 of homes sold, Addoha keeps about MAD 10.5 as real profit. That's healthy for real estate — the industry is capital-intensive and margins are structurally tight.
+**The simple version:** For every MAD 100 of homes sold, Addoha keeps about MAD 10.5 as real profit. Margins are structurally tight. Any improvement in unit economics — even small ones — compounds quickly at this revenue scale.
 
 ---
 
-## The Two Levers That Marketing Controls
+## The Green Homes Premise
 
-Marketing can't change the cost of cement. But it controls two things directly:
+The idea is simple: add low-cost energy-saving features to every unit, charge a small premium, keep the difference as margin — and let the energy savings sell the product for you.
 
-### Lever A — Realized Price
-*Selling at the listed price instead of discounting to close deals.*
-
-#### Why discounts happen in the first place
-In Moroccan real estate, buyers discount-shop not because they want a bargain but because they're uncertain. They don't know their subsidy eligibility, don't know what the monthly payment would be, and can't assess whether the purchase is financially viable without talking to a salesperson first. That uncertainty turns into negotiation. The salesperson, under pressure to close, grants 2–5% off the listed price. The unit sells. The margin evaporates quietly.
-
-A CRM-driven digital platform — payment simulator, subsidy checker, instant WhatsApp response — resolves that uncertainty *before* the buyer reaches the negotiating table. Informed buyers don't negotiate on price. They negotiate on timeline.
-
-#### Why this lever is structurally more powerful than volume
-
-This is the argument the standard presentation misses. When Addoha sells one more unit (volume), construction costs increase proportionally. The incremental profit is capped at the gross margin rate — 25.4 cents per additional dirham of revenue.
-
-When Addoha sells the *same unit at a higher price* (realized price), the cost of building that home doesn't change by a single dirham. The entire price improvement flows straight through the P&L as profit.
-
-| Lever | +1% improvement | Revenue gain | Cost increase | Gross profit gain |
-|---|---|---|---|---|
-| **Price** | +1% on MAD 2,594.7M | +MAD 26.0M | MAD 0 | **+MAD 26.0M** |
-| **Volume** | +1% more units | +MAD 26.0M | +MAD 23.2M (construction) | **+MAD 6.6M** |
-
-**Price is roughly 4x more efficient than volume at the gross profit level.**
-
-#### The cascade down the P&L
-
-This is where the argument becomes truly compelling. Because building costs are fixed per unit, a price improvement doesn't just improve gross profit — it cascades through every line of the income statement unchanged, all the way to net income.
-
-Using a ~35% effective tax rate (as observed in 2024 actuals):
-
-| Price improvement | Gross profit gain | EBIT gain | Net income gain (after tax) |
-|---|---|---|---|
-| +0.5% | +MAD 13.0M | +MAD 13.0M | **+MAD 8.4M** |
-| +1.0% | +MAD 26.0M | +MAD 26.0M | **+MAD 16.9M** |
-| +2.0% | +MAD 51.9M | +MAD 51.9M | **+MAD 33.7M** |
-
-A 1% price improvement doesn't just generate MAD 26M in gross profit. It generates **MAD 16.9M in additional net income** — money that belongs to shareholders. On a 2024 net income base of MAD 272.2M, that is a 6.2% improvement in bottom-line profitability from pricing discipline alone.
-
-#### The defensive argument — margin recovery is already happening, but fragile
-
-Addoha's gross margin tells a story worth anchoring to:
-
-| Year | Gross Margin |
-|---|---|
-| 2022 | 27.6% |
-| 2023 | 23.2% ← compression |
-| 2024 | 25.4% ← partial recovery |
-
-The 2023 compression was a 4.4 percentage point fall — equivalent to losing MAD ~94M in gross profit at today's revenue scale. The 2024 recovery is real but incomplete. The price lever is therefore not only an offensive growth argument; it is a structural hedge against a repeat of 2023. A digital platform that reduces discount pressure stabilises the margin floor.
-
-#### The pipeline argument — MAD 15.6B of WIP at stake
-
-Addoha carries **MAD 15,576.2M in Work-in-Progress** on the balance sheet — homes under construction that will be delivered and sold over the coming years. Pricing discipline established now applies to that entire pipeline. A 1% improvement in realized price on future deliveries from that WIP base is not a one-year effect. It is a multi-year compound improvement in margin quality, baked in at the moment of sale.
-
-#### What "+1%" actually requires in practice
-
-For context: recovering 1% of realized price does not mean raising prices. It means:
-- Reducing the average discount from (hypothetically) 3.5% to 2.5% on eligible units
-- Closing the same deals with less concession because buyers arrive informed, not uncertain
-- Cutting the frequency of price reductions used to clear slow-moving inventory
-
-This is a sales process improvement, not a market pricing call. It is within operational control.
-
-| Price improvement | Additional gross profit | Additional net income (after ~35% tax) |
+| Component | Amount | Logic |
 |---|---|---|
-| +0.5% | MAD 13.0M | MAD 8.4M |
-| +1.0% | MAD 26.0M | MAD 16.9M |
-| +2.0% | MAD 51.9M | MAD 33.7M |
+| **Green features cost per unit** | MAD 6,000 | Solar water heater + thermal insulation + orientation optimisation |
+| **Price premium per unit** | MAD 7,000 | What the market pays for a tangible, quantifiable monthly saving |
+| **Net margin per unit** | **MAD 1,000** | Incremental gross profit on every green unit sold |
+| **Customer payback period** | ~2 years | How long before energy savings exceed the MAD 7,000 premium |
+| **10-year customer savings** | ~MAD 30,000 | What the customer gains over a decade vs. a standard unit |
 
-### Lever B — Volume
-*Selling more units with the same marketing infrastructure.*
+The pricing logic is straightforward: the customer is not paying MAD 7,000 for solar panels. They are paying MAD 7,000 to reduce their electricity bill by approximately MAD 250 per month, indefinitely. The math works overwhelmingly in their favour. That's what makes it sellable without any eco-messaging.
 
-Once the website, CRM, and WhatsApp system are built, each additional sale costs almost nothing incrementally in marketing terms — but construction costs do scale with every unit. A 1% increase in units sold generates roughly MAD 6.6M in additional gross profit (only the 25.4% gross margin portion of revenue flows through — the rest covers building costs). This lever is meaningful at scale but is structurally less efficient than the price lever, which is why price protection comes first.
+---
 
-| Volume increase | Additional gross profit |
+## Why Energy Messaging Works Better Than Eco-Messaging in Morocco
+
+Most green housing programs fail in emerging markets because they lead with environmental values. The Moroccan middle-income buyer is not indifferent to the environment — but their primary financial pressure is the monthly bill stack: rent or mortgage, food, school fees, utilities.
+
+A housing product that reduces that bill stack wins on rational grounds before it wins on emotional ones.
+
+**The campaign tagline captures this precisely:** *"Tkhallas dar w tn9es l facture"* — Pay your home and reduce your bills.
+
+It connects two things the buyer wants simultaneously. No sustainability language. No green credentials. Just dirhams saved every month.
+
+---
+
+## The Two Levers That Green Homes Controls
+
+Unlike the Welli Moul Dar strategy — which operates on price realization and volume through funnel improvement — Green Homes operates on a direct per-unit margin lever and a secondary volume acceleration lever.
+
+### Lever A — Green Premium Volume
+*Selling more units with the green premium embedded and accepted.*
+
+Every green unit sold generates MAD 1,000 in incremental gross profit beyond what a standard unit would produce. This lever is linear, predictable, and auditable — unlike the price realization lever, which depends on behavioural change across the sales force.
+
+| Green units sold with premium accepted | Additional gross profit |
 |---|---|
-| +1% | MAD 6.6M |
-| +2% | MAD 13.2M |
+| 5,000 units | MAD 5.0M |
+| 8,000 units | MAD 8.0M |
+| 10,000 units | MAD 10.0M |
+| 12,000 units | MAD 12.0M |
+
+**Why this lever is structurally clean:** The cost is embedded in the unit's COGS. The premium is embedded in the price. The MAD 1,000 margin difference is a fact of the product design, not a behavioural outcome. It does not require discount discipline, CRM adoption, or sales force behavioural change to materialise — it materialises the moment a green unit is sold at the listed price.
+
+**The one risk:** Premium acceptance rate. If buyers reject the MAD 7,000 premium, this lever collapses. The target acceptance rate is 80%+. Below 65%, the messaging or the bill calculator needs revision. Above 85%, the premium likely has room to move higher.
+
+#### Why Lever A is structurally different from WMD's price lever
+
+In the Welli Moul Dar strategy, the price lever works by reducing discounting behaviour across the existing portfolio — a behavioural improvement applied to units that are already being built and priced. In Green Homes, the margin improvement is baked into the product specification before construction begins. It doesn't require salespeople to hold the line on price; it requires buyers to accept a premium they can verify saves them money.
+
+One lever depends on sales discipline. The other depends on product math. Product math is more reliable.
+
+### Lever B — Sales Velocity Lift
+*Selling units faster because a differentiated product attracts more buyers.*
+
+A standard unit competes on location, size, and price. A green unit adds a fourth dimension: monthly cost of ownership. That additional dimension gives Addoha a reason to win buyers who would otherwise shop competitors — and it shortens the decision cycle because the financial case is pre-made by the bill calculator.
+
+Faster sales cycles mean faster cash collection on projects, which improves project-level returns beyond what the P&L captures.
+
+| Volume increase from differentiation | Additional gross profit |
+|---|---|
 | +3% | MAD 19.8M |
+| +5% | MAD 33.0M |
+| +7% | MAD 46.2M |
+
+Note: this is the same volume lever that appears in the Welli Moul Dar analysis (MAD 6.6M per 1% volume). Green Homes does not improve this lever more efficiently than WMD — it accesses the same lever through a different mechanism (product pull rather than funnel push).
 
 ---
 
 ## What Happens If You Pull Both Levers Together
 
-These two effects stack. A modest improvement on both fronts produces meaningful numbers:
-
-| Scenario | Price improvement | Volume improvement | Total additional gross profit |
+| Scenario | Green units (Lever A) | Volume lift (Lever B) | Total additional gross profit |
 |---|---|---|---|
-| **Conservative** | +0.5% | +2% | **~MAD 26.2M** |
-| **Ambitious** | +1.0% | +3% | **~MAD 45.7M** |
+| **Pilot** | 5,000 units | +3% | ~MAD 24.8M |
+| **Conservative** | 8,000 units | +3% | ~MAD 27.8M |
+| **Base** | 10,000 units | +5% | ~MAD 43.0M |
+| **Ambitious** | 12,000 units | +5% | ~MAD 45.0M |
 
-Neither scenario requires a dramatic market shift. It requires fewer discounts and a better-converting funnel.
+The conservative scenario alone — 8,000 green units and a 3% volume lift — already exceeds MAD 25M, which is the full annual budget of the Welli Moul Dar campaign. Green Homes achieves comparable upside at a fraction of the marketing cost.
 
 ---
 
 ## The Investment Required
 
-To achieve those improvements, Addoha needs to build the digital infrastructure that makes them possible: a proper website, a WhatsApp-CRM pipeline, a payment simulator, and paid campaigns.
+This is where Green Homes diverges most sharply from WMD.
 
-**Proposed annual investment: MAD 20–25M**
+In WMD, the MAD 20–25M is a recurring annual marketing operating expense: ads, CRM, content, staff. It must be re-spent every year to maintain the funnel.
 
-| Budget line | Purpose |
-|---|---|
-| Digital advertising (Meta, Google, YouTube) | Reach the right buyers, not everyone |
-| CRM & tech stack | Track every lead from first click to reservation |
-| Content & creative | Ads and pages that explain, not just promote |
-| MRE campaign layer | Target the diaspora market separately |
+In Green Homes, the main cost is not a marketing expense — it is embedded in the product.
 
-**This is ~0.9% of revenue.** The real estate industry typically spends 1–3% on marketing for active launch programs. This proposal is conservative.
+| Cost component | Type | Amount | Notes |
+|---|---|---|---|
+| Green features per unit | COGS (recovered via premium) | MAD 6,000/unit | Paid at construction; recovered via MAD 7,000 premium at sale |
+| Supplier & engineering setup | One-time capex | ~MAD 5M | Supplier contracts, insulation standards, construction integration |
+| Showroom mockups & tools | One-time capex | Included in setup | Bill display, savings calculator, show unit |
+| Annual campaign (Facebook, Instagram, sales training) | Recurring opex | MAD 5–8M/yr | Much smaller than WMD because the product sells itself |
+
+**Annual investment-to-revenue ratio: ~0.3%** — vs. WMD's 0.9%. Green Homes runs a significantly leaner marketing cost structure because the product's financial case does most of the selling work.
+
+**Critical distinction:** The MAD 6,000 per-unit green cost is not a loss — it is recovered through the MAD 7,000 premium at the point of sale, netting MAD 1,000 in incremental margin. The only true incremental marketing cost is the MAD 5–8M annual campaign budget, plus the one-time setup.
 
 ---
 
 ## Does the Investment Pay Off? The Break-Even Analysis
 
-**Break-even point:** The investment pays for itself if Addoha achieves either:
-- A **+1.0% improvement in realized price** (less discounting), OR
-- A **+3.8% increase in volume** (more units sold)
+**Break-even point:** The MAD 8M annual campaign covers itself when:
+- **8,000 green units are sold** at the full premium (Lever A alone covers the campaign cost), OR
+- **A 1.2% volume lift** is achieved from the differentiation effect (Lever B alone)
 
-Both are considered achievable through better funnel performance alone — no new projects, no price cuts, no market tailwinds needed.
+Both thresholds are conservative. The pilot target is 500–1,000 units in 2–3 projects. Even at 8,000 units — well within Addoha's annual Eco & MS volume — the campaign pays for itself before any volume uplift is counted.
 
-### Conservative scenario (modest execution)
-- **Upside:** +MAD 26.2M additional gross profit
-- **Cost:** MAD 25M investment
-- **Net return:** +MAD 1.2M → **+5% net ROI**
-- *Even in this scenario the platform is fully built, the CRM is running, and year 2 is pure upside*
+### Conservative scenario (8,000 units + 3% volume lift)
+- **Upside:** ~MAD 27.8M additional gross profit
+- **Cost:** MAD 8M campaign + MAD 5M one-time setup = MAD 13M total year-one investment
+- **Net return:** +MAD 14.8M → **+114% net ROI in year one**
+- *Year two: one-time setup cost drops. Net ROI improves to +247% on the recurring campaign spend alone.*
 
-### Ambitious scenario (strong execution)
-- **Upside:** +MAD 45.7M additional gross profit
-- **Cost:** MAD 25M investment
-- **Net return:** +MAD 20.7M → **+83% net ROI**
-- *For every MAD 1 invested, MAD 1.83 of gross profit is generated*
+### Ambitious scenario (12,000 units + 5% volume lift)
+- **Upside:** ~MAD 45.0M additional gross profit
+- **Cost:** MAD 8M campaign (setup already amortised)
+- **Net return:** +MAD 37.0M → **+463% net ROI**
+- *For every MAD 1 invested in the campaign, MAD 5.63 of gross profit is generated*
+
+---
+
+## How Green Homes Compares to Welli Moul Dar
+
+Both strategies target the same gross profit improvement range. They differ fundamentally in how they get there.
+
+| Dimension | Welli Moul Dar | Green Homes |
+|---|---|---|
+| **Annual marketing cost** | MAD 20–25M | MAD 5–8M |
+| **Investment-to-revenue ratio** | ~0.9% | ~0.3% |
+| **Margin mechanism** | Less discounting + more units | Per-unit premium + more units |
+| **Time to first financial impact** | 3–6 months | 12–18 months |
+| **Competitive moat** | Low (funnel is copyable) | Medium (product requires supply chain) |
+| **Execution risk** | Low (operational) | Medium (construction + supply chain) |
+| **Customer benefit duration** | One-time (during purchase) | Permanent (monthly savings forever) |
+| **Conservative upside** | ~MAD 26M | ~MAD 28M |
+| **Ambitious upside** | ~MAD 46M | ~MAD 45M |
+
+**The upside is comparable. The cost structure is radically different.**
+
+WMD's MAD 20–25M is a recurring annual commitment that must be renewed each year to sustain funnel performance. Green Homes' MAD 5–8M campaign cost is sustained by a product that partially markets itself — every resident who mentions their lower electricity bill is an unpaid advocate.
+
+---
+
+## The Sequencing Argument
+
+These are not competing strategies. They operate on different time horizons and different parts of the business.
+
+| Timeline | Action | Rationale |
+|---|---|---|
+| **Now → 6 months** | Deploy WMD | Fast, low-risk, immediate funnel improvement on existing inventory |
+| **6 → 18 months** | Integrate Green Homes into next construction cycle | Requires a full construction cycle — cannot be rushed |
+| **18 months+** | Run both simultaneously | WMD drives awareness and qualified traffic; Green Homes closes conviction and reduces discount pressure |
+
+**Combined upside at maturity: MAD 60–90M in additional gross profit** — WMD and Green Homes are additive, not substitutable.
+
+The argument for sequencing WMD first is speed: the funnel can be built in one quarter and starts generating returns immediately. Green Homes requires patience through one full construction-to-sales cycle before a single data point is available. Starting now on both simultaneously wastes the 12-month construction window during which WMD would be running and improving anyway.
+
+---
+
+## The Risk Nobody Mentions: Premium Acceptance
+
+Every scenario in this analysis assumes that 80%+ of buyers accept the MAD 7,000 green premium. That assumption must be validated in the pilot before the strategy is scaled.
+
+If buyers reject the premium — or only accept it after the discount is applied back — then Lever A collapses entirely and Green Homes becomes a cost increase without a revenue offset.
+
+The pilot's single most important KPI is not energy savings. It is **premium acceptance rate**. Everything else — volume lift, brand differentiation, word-of-mouth — is secondary to this number.
+
+> **If premium acceptance is below 65% in the pilot, do not scale. Fix the messaging or the calculator first.**
 
 ---
 
 ## The One-Line Summary
 
 > Addoha already makes MAD 659.8M in gross profit on MAD 2.595B of revenue.
-> A MAD 25M investment in the right digital infrastructure needs only a 1% pricing improvement to break even — and delivers up to MAD 45.7M in upside if execution is strong.
-> **The risk is low. The downside is a built platform. The upside is material.**
+> A MAD 5–8M/yr campaign investment — backed by a MAD 6,000/unit feature that generates a MAD 7,000 premium — needs only 8,000 green units sold to cover its own cost.
+> At scale, it generates MAD 28–45M in additional gross profit on a fraction of WMD's marketing spend.
+> **The economics are compelling. The execution risk is real. The pilot will tell you which one dominates.**
 
 ---
 
-*Based on Addoha Group consolidated IFRS financials FY 2024 (Rapports Financiers Annuels). All figures in MAD millions unless stated otherwise.*
+*Based on Addoha Group consolidated IFRS financials FY 2024 (Rapports Financiers Annuels). Green features cost and premium estimates based on strategy model assumptions — to be validated against actual supplier quotes and market testing. All figures in MAD millions unless stated otherwise.*
